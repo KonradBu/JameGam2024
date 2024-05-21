@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdgo2qx0ind1q"
-path="res://.godot/imported/Running_front_0000.png-211c15621af4f4cadd65ce1578a782fa.ctex"
+uid="uid://25ycsgg54tqb"
+path="res://.godot/imported/Running_front_0001.png-440d042fe261beeb7edc4275dc87cefe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Animations/Walk/Running_front_0000.png"
-dest_files=["res://.godot/imported/Running_front_0000.png-211c15621af4f4cadd65ce1578a782fa.ctex"]
+source_file="res://Animations/Walk/Front/Running_front_0001.png"
+dest_files=["res://.godot/imported/Running_front_0001.png-440d042fe261beeb7edc4275dc87cefe.ctex"]
 
 [params]
 
