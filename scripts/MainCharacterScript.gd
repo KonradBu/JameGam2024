@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
-
 @export var speed = 400
 @export var friction = 0.3
 @export var acceleration = 0.1
 @export var canThrowNeedle = true
-
+@onready var _animated_sprite = $Player
 signal needleThrown (mouseDirection, position)
 var needleScene: PackedScene = preload("res://scenes/needle.tscn")
 
@@ -30,6 +29,13 @@ func _physics_process(_delta):
 	move_and_slide()
 
 func _process(delta):
+	#animation processing
+	if Input.is_action_pressed('MoveDown'):
+		_animated_sprite.stop()
+		_animated_sprite.play("Walk Down")
+	if Input.is_action_pressed('MoveUp'):
+		_animated_sprite.stop()
+		_animated_sprite.play("walk up")
 	#Direction Processing
 	if(Input.is_action_just_pressed("leftClick") or Input.is_action_just_pressed("rightClick")):
 		pass
