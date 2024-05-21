@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmp4evg7brxxt"]
+[gd_scene load_steps=4 format=3 uid="uid://dmp4evg7brxxt"]
 
 [ext_resource type="PackedScene" uid="uid://c2pfdqffyyxh8" path="res://Player.tscn" id="1_jpou1"]
+[ext_resource type="PackedScene" uid="uid://37iaiqjrojew" path="res://enemy.tscn" id="2_2utsb"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4lbbl"]
+vertices = PackedVector2Array(2465, -1322, 2330, 1357, -1175, 1218, -1006, -1422)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-1008, -1416, -1186, 1228, 2340, 1368, 2476, -1332)])
+source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("1_jpou1")]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_4lbbl")
+
+[node name="Enemy" parent="." instance=ExtResource("2_2utsb")]
