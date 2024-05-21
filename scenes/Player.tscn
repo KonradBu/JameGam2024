@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2pfdqffyyxh8"]
+[gd_scene load_steps=3 format=3 uid="uid://c2pfdqffyyxh8"]
 
 [ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="1_6c4qg"]
+[ext_resource type="SpriteFrames" uid="uid://b6w7dkinnf273" path="res://Animations/Reference files/Player.tres" id="1_yoyb5"]
 
 [node name="Player" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_yoyb5")
+animation = &"Other side idle"
 script = ExtResource("1_6c4qg")
