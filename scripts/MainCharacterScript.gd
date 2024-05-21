@@ -54,6 +54,9 @@ func _process(delta):
 	if Input.is_action_just_released('MoveRight'):
 		_animated_sprite.stop()
 		_animated_sprite.play("Right Idle")
+		
+		
+		
 	#Direction Processing
 	if(Input.is_action_just_pressed("rightClick")):
 		canThrowNeedle = true

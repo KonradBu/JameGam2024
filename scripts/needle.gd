@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	velocity.x = needleSpeed
+	pass
 	
 func _init():
 	pass
@@ -13,4 +13,7 @@ func _process(delta):
 	pass
 	
 func _physics_process(delta):
+	var movement_vector2: Vector2 = Vector2.RIGHT.rotated(rotation)
+	movement_vector2 = movement_vector2 * needleSpeed
+	velocity = movement_vector2
 	move_and_slide()
