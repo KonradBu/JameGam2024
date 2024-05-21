@@ -1,8 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716316178
-Player.tscn::PackedScene::6699215602627363851::1716312048::0::1::::<><>::res://scripts/MainCharacterSkript.gd
-README.md::TextFile::-1::1716290285::0::1::::<><>::
-enemy.tscn::PackedScene::4634639225797420768::1716319498::0::1::::<><>::res://scripts/Enemy.gd
+::res://::1716329105
+README.md::TextFile::-1::1716322879::0::1::::<><>::
 ::res://Animations/::1716311275
 ::res://Animations/Idle/::1716309413
 ::res://Animations/Idle/back/::1716303394
@@ -52,11 +50,12 @@ running_side_0003.png::CompressedTexture2D::6241284180585489422::1716313154::171
 running_side_0004.png::CompressedTexture2D::224329377823616505::1716313156::1716313179::1::::<><>::
 running_side_0005.png::CompressedTexture2D::2901191297146876173::1716313159::1716313179::1::::<><>::
 ::res://GameDesignDoc/::1716299518
-::res://scenes/::1716316791
+::res://scenes/::1716319623
 character.tscn::PackedScene::4018656856966668485::1716313013::0::1::::<><>::res://scripts/MainCharacterScript.gd<>uid://c2pfdqffyyxh8::::res://scenes/Player.tscn
+enemy.tscn::PackedScene::4634639225797420768::1716319623::0::1::::<><>::res://scripts/Enemy.gd
 exit.tscn::PackedScene::1524713761949062417::1716312048::0::1::::<><>::res://scripts/door.gd
 Game.tscn::PackedScene::8034262890727580437::1716319487::0::1::::<><>::uid://bxiwxre5t1vfh::::res://scenes/character.tscn<>res://scripts/Enemy.gd
-menu.tscn::PackedScene::-1::1716310907::0::1::::<><>::
+menu.tscn::PackedScene::7919782718543106277::1716316178::0::1::::<><>::res://scripts/Menu.gd
 needle.tscn::PackedScene::7304564092993684703::1716316178::0::1::::<><>::res://scripts/needle.gd<>uid://fuih0764gvlj::::res://textures/needleTemp.png
 Player.tscn::PackedScene::6699215602627363851::1716314210::0::1::::<><>::uid://b6w7dkinnf273::::res://Animations/Reference files/Player.tres
 roomEntrance.tscn::PackedScene::1474867569436518966::1716316178::0::1::::<><>::res://scripts/world.gd<>uid://bxiwxre5t1vfh::::res://scenes/character.tscn<>uid://vyt2vyb724xx::::res://scenes/exit.tscn<>uid://db8fm861qwfa3::::res://textures/icon.svg

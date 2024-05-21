@@ -1,11 +1,3 @@
-res://Game.tscn
-res://Player.tscn
-res://enemy.tscn
-res://scripts/Enemy.gd
 res://scenes/Game.tscn
-res://scenes/Player.tscn
+res://scripts/Enemy.gd
 res://Animations/Reference files/Player.tres
-res://scripts/MainCharacterScript.gd
-res://scripts/CharacterBody2D.gd
-res://scenes/character.tscn
-res://scenes/enemy.tscn
