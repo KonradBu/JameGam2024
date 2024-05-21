@@ -4,4 +4,5 @@
 
 [node name="Player" type="AnimatedSprite2D"]
 sprite_frames = ExtResource("1_yoyb5")
-animation = &"Walk Down"
+animation = &"Run left"
+frame_progress = 0.367624
