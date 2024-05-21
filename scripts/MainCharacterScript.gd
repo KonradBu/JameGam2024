@@ -57,16 +57,17 @@ func _process(delta):
 		
 		
 		
-	#Direction Processing
 	if(Input.is_action_just_pressed("rightClick")):
 		canThrowNeedle = true
+		#rectracting the needle goes here
+		
+		
+	
+	#throwing the needle
 	if(Input.is_action_just_pressed("leftClick") and canThrowNeedle == true):
 		canThrowNeedle = false
-		var mousePosition = get_local_mouse_position()
-		var angle = atan2(mousePosition.y, mousePosition.x)
 		var needle_instance = needleScene.instantiate()
 		var parent = get_parent()
 		parent.add_child(needle_instance) 
-		var positionPlayer = $".".get_global_position()
-		needle_instance.position = positionPlayer
-		needle_instance.rotation = rad_to_deg(angle)
+		var positionPlayer = get_global_position()
+		needle_instance.global_position = positionPlayer

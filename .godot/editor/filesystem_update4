@@ -1,8 +1,12 @@
+res://scenes/menu.tscn
+res://scripts/Enemy.gd
+res://Animations/Reference files/Player.tres
 res://scenes/character.tscn
-res://scenes/roomEntrance.tscn
+res://scenes/enemy.tscn
 res://scenes/exit.tscn
-res://scenes/roomFloor.tscn
 res://scenes/needle.tscn
-res://scenes/Game.tscn
-res://scripts/MainCharacterScript.gd
+res://scenes/Player.tscn
+res://scenes/roomEntrance.tscn
+res://scenes/roomFloor.tscn
 res://scripts/needle.gd
+res://scripts/MainCharacterScript.gd

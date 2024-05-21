@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://keprwdqxvsmt"]
+[gd_scene load_steps=4 format=3 uid="uid://dmp4evg7brxxt"]
 
-[ext_resource type="PackedScene" uid="uid://c2pfdqffyyxh8" path="res://Player.tscn" id="1_jpou1"]
-[ext_resource type="PackedScene" path="res://scenes/enemy.tscn" id="2_2utsb"]
+[ext_resource type="PackedScene" uid="uid://bxiwxre5t1vfh" path="res://scenes/character.tscn" id="2_3mcqu"]
+[ext_resource type="PackedScene" uid="uid://b7bb3isp2f1ng" path="res://scenes/enemy.tscn" id="2_jira1"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4lbbl"]
 vertices = PackedVector2Array(2465, -1322, 2330, 1357, -1175, 1218, -1006, -1422)
@@ -14,8 +14,9 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_4lbbl")
 
-[node name="Enemy" parent="." instance=ExtResource("2_2utsb")]
+[node name="Character" parent="." instance=ExtResource("2_3mcqu")]
 
 [node name="Player" parent="." instance=ExtResource("1_jpou1")]
 animation = &""
 frame_progress = 0.657859
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_jira1")]

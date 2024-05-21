@@ -3,6 +3,7 @@
 [ext_resource type="SpriteFrames" uid="uid://b6w7dkinnf273" path="res://Animations/Reference files/Player.tres" id="1_yoyb5"]
 
 [node name="Player" type="AnimatedSprite2D"]
+scale = Vector2(0.4, 0.4)
 sprite_frames = ExtResource("1_yoyb5")
 animation = &"Left Idle"
 frame_progress = 0.249423
