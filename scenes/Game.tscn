@@ -17,5 +17,5 @@ navigation_polygon = SubResource("NavigationPolygon_4lbbl")
 [node name="Enemy" parent="." instance=ExtResource("2_2utsb")]
 
 [node name="Player" parent="." instance=ExtResource("1_jpou1")]
-animation = &"walk up"
-frame_progress = 0.260752
+animation = &"back Idle"
+frame_progress = 0.72354
