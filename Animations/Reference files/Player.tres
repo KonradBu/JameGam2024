@@ -40,6 +40,20 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_ci471")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bouee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_godmh")
+}],
+"loop": true,
+"name": &"Left Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("1_g5oho")
 }, {
 "duration": 1.0,
@@ -49,7 +63,7 @@ animations = [{
 "texture": ExtResource("3_1d0ol")
 }],
 "loop": true,
-"name": &"Other side idle",
+"name": &"Right Idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -97,20 +111,6 @@ animations = [{
 "loop": true,
 "name": &"Run right",
 "speed": 17.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_ci471")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_bouee")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_godmh")
-}],
-"loop": true,
-"name": &"Side Idle",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

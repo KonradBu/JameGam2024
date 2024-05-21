@@ -33,15 +33,27 @@ func _process(delta):
 	if Input.is_action_pressed('MoveDown'):
 		_animated_sprite.stop()
 		_animated_sprite.play("Walk Down")
+	if Input.is_action_just_released('MoveDown'):
+		_animated_sprite.stop()
+		_animated_sprite.play("front Idle")
 	if Input.is_action_pressed('MoveUp'):
 		_animated_sprite.stop()
 		_animated_sprite.play("walk up")
+	if Input.is_action_just_released('MoveUp'):
+		_animated_sprite.stop()
+		_animated_sprite.play("back Idle")
 	if Input.is_action_pressed("MoveLeft"):
 		_animated_sprite.stop()
 		_animated_sprite.play("Run left")
+	if Input.is_action_just_released('MoveLeft'):
+		_animated_sprite.stop()
+		_animated_sprite.play("Left Idle")
 	if Input.is_action_pressed("MoveRight"):
 		_animated_sprite.stop()
 		_animated_sprite.play("Run right")
+	if Input.is_action_just_released('MoveRight'):
+		_animated_sprite.stop()
+		_animated_sprite.play("Right Idle")
 	#Direction Processing
 	if(Input.is_action_just_pressed("leftClick") or Input.is_action_just_pressed("rightClick")):
 		pass
