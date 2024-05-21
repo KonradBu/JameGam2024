@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://vao4ars2g64a"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_gnsky"]
+[ext_resource type="PackedScene" uid="uid://bxiwxre5t1vfh" path="res://scenes/character.tscn" id="2_nx2yu"]
+[ext_resource type="PackedScene" uid="uid://vyt2vyb724xx" path="res://scenes/exit.tscn" id="3_506tg"]
+[ext_resource type="Texture2D" uid="uid://db8fm861qwfa3" path="res://textures/icon.svg" id="4_1gtqq"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_gnsky")
+
+[node name="Node2D" parent="." instance=ExtResource("2_nx2yu")]
+position = Vector2(-264, 26)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_506tg")]
+position = Vector2(909, 281)
+rotation = 3.10902
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(568, 401)
+rotation = -0.0091209
+texture = ExtResource("4_1gtqq")
