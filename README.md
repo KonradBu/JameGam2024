@@ -1,3 +1,6 @@
 Our Project for Jame Gam 2024
-Autors:
-rakeaDev
+Authors:
+rakeaDev (Konrad Burgi)
+botthemew (Connor Walton)
+Vanaco
+Luc
