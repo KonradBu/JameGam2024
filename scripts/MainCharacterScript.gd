@@ -36,6 +36,12 @@ func _process(delta):
 	if Input.is_action_pressed('MoveUp'):
 		_animated_sprite.stop()
 		_animated_sprite.play("walk up")
+	if Input.is_action_pressed("MoveLeft"):
+		_animated_sprite.stop()
+		_animated_sprite.play("Run left")
+	if Input.is_action_pressed("MoveRight"):
+		_animated_sprite.stop()
+		_animated_sprite.play("Run right")
 	#Direction Processing
 	if(Input.is_action_just_pressed("leftClick") or Input.is_action_just_pressed("rightClick")):
 		pass
