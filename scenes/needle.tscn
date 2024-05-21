@@ -7,7 +7,7 @@
 size = Vector2(33, 57)
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(1, -27)
+position = Vector2(-1, -28)
 
 [node name="Needle" type="CharacterBody2D" parent="."]
 script = ExtResource("1_bnp4x")
@@ -22,7 +22,3 @@ shape = SubResource("RectangleShape2D_m3720")
 position = Vector2(0, 28)
 scale = Vector2(0.100791, 0.100791)
 texture = ExtResource("2_y8prj")
-
-[node name="Collision" type="CollisionShape2D" parent="Needle"]
-position = Vector2(-0.5, 27.5)
-shape = SubResource("RectangleShape2D_m3720")

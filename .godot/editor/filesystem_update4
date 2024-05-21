@@ -1,0 +1,9 @@
+res://scenes/character.tscn
+res://scenes/roomEntrance.tscn
+res://scenes/exit.tscn
+res://scenes/roomFloor.tscn
+res://scenes/needle.tscn
+res://scenes/Game.tscn
+res://scripts/needle.gd
+res://scripts/rooms.gd
+res://scripts/MainCharacterScript.gd

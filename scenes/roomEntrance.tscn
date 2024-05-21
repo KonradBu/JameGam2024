@@ -9,7 +9,7 @@
 script = ExtResource("1_gnsky")
 
 [node name="Player" parent="." instance=ExtResource("2_nx2yu")]
-position = Vector2(-264, 26)
+position = Vector2(313, 220)
 
 [node name="Exit" parent="." instance=ExtResource("3_506tg")]
 position = Vector2(790, 247)
