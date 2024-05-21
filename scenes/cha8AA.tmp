@@ -9,7 +9,6 @@ size = Vector2(81, 81)
 [node name="Character" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["enemies", "player"]]
-position = Vector2(-358, -155)
 script = ExtResource("1_4mw5y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]

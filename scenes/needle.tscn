@@ -7,6 +7,7 @@
 size = Vector2(33, 57)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(1, -27)
 
 [node name="Needle" type="CharacterBody2D" parent="."]
 script = ExtResource("1_bnp4x")

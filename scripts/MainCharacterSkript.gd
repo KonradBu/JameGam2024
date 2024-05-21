@@ -4,7 +4,6 @@ extends CharacterBody2D
 @export var speed = 400
 @export var friction = 0.3
 @export var acceleration = 0.1
-@export var needleSpeed = 800
 @export var canThrowNeedle = true
 
 signal needleThrown (mouseDirection, position)
@@ -42,5 +41,3 @@ func _process(delta):
 		add_child(needle_instance) 
 		needle_instance.position = $".".position
 		needle_instance.rotation = rad_to_deg(angle)
-		#needle_instance.velocity = needleSpeed
-		

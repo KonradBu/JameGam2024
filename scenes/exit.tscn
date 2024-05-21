@@ -8,7 +8,7 @@ size = Vector2(20, 159)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1b4p"]
 size = Vector2(62, 213)
 
-[node name="Node2D" type="Node2D"]
+[node name="Exit" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
