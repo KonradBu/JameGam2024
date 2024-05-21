@@ -1,7 +1,9 @@
+NavigationAgent2D
+AnimatedSprite2D
+CharacterBody2D
 Button
 VBoxContainer
 MarginContainer
-CharacterBody2D
 RigidBody2D
 CollisionShape2D
 Sprite2D
