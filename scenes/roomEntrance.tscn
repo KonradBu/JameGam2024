@@ -12,7 +12,7 @@ script = ExtResource("1_gnsky")
 position = Vector2(-264, 26)
 
 [node name="Node2D2" parent="." instance=ExtResource("3_506tg")]
-position = Vector2(909, 281)
+position = Vector2(790, 247)
 rotation = 3.10902
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

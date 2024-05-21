@@ -4,8 +4,11 @@ extends CharacterBody2D
 @export var speed = 400
 @export var friction = 0.3
 @export var acceleration = 0.1
+@export var needleSpeed = 800
+@export var canThrowNeedle = true
 
-
+signal needleThrown (mouseDirection, position)
+var needleScene: PackedScene = preload("res://scenes/needle.tscn")
 
 func get_input():
 	var input = Vector2()
@@ -26,3 +29,18 @@ func _physics_process(_delta):
 	else:
 		velocity = velocity.lerp(Vector2.ZERO, friction)
 	move_and_slide()
+
+func _process(delta):
+	#Direction Processing
+	if(Input.is_action_just_pressed("leftClick") or Input.is_action_just_pressed("rightClick")):
+		pass
+	if(Input.is_action_just_pressed("leftClick") and canThrowNeedle == true):
+		canThrowNeedle = false
+		var mousePosition = get_local_mouse_position()
+		var angle = atan2(mousePosition.y, mousePosition.x)
+		var needle_instance = needleScene.instantiate()
+		add_child(needle_instance) 
+		needle_instance.position = $".".position
+		needle_instance.rotation = rad_to_deg(angle)
+		#needle_instance.velocity = needleSpeed
+		

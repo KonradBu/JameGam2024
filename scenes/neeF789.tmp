@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dccndrsdcc0df"]
+
+[ext_resource type="Script" path="res://scripts/needle.gd" id="1_bnp4x"]
+[ext_resource type="Texture2D" uid="uid://fuih0764gvlj" path="res://textures/needleTemp.png" id="2_y8prj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3720"]
+size = Vector2(33, 57)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Needle" type="CharacterBody2D" parent="."]
+script = ExtResource("1_bnp4x")
+
+[node name="Area2D" type="Area2D" parent="Needle"]
+
+[node name="AreaCollision" type="CollisionShape2D" parent="Needle/Area2D"]
+position = Vector2(-0.5, 27.5)
+shape = SubResource("RectangleShape2D_m3720")
+
+[node name="Sprite2D" type="Sprite2D" parent="Needle"]
+position = Vector2(0, 28)
+scale = Vector2(0.100791, 0.100791)
+texture = ExtResource("2_y8prj")
+
+[node name="Collision" type="CollisionShape2D" parent="Needle"]
+position = Vector2(-0.5, 27.5)
+shape = SubResource("RectangleShape2D_m3720")
