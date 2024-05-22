@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://ctlqe7mmq1psi"]
+[gd_scene load_steps=8 format=3 uid="uid://ctlqe7mmq1psi"]
 
+[ext_resource type="Texture2D" uid="uid://b0cg7123vdqrr" path="res://Arts/cutscene thing.png" id="1_06o6t"]
 [ext_resource type="Script" path="res://scripts/CutsceneText.gd" id="1_chrna"]
 
 [sub_resource type="Gradient" id="Gradient_tavak"]
@@ -8,12 +9,6 @@ colors = PackedColorArray(0.25113, 3.05329e-07, 5.41471e-08, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_uq0k0"]
 gradient = SubResource("Gradient_tavak")
 fill_from = Vector2(1, 0)
-
-[sub_resource type="Gradient" id="Gradient_7k3na"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_qsi4b"]
-gradient = SubResource("Gradient_7k3na")
-fill_to = Vector2(0, 0.00306748)
 
 [sub_resource type="Animation" id="Animation_jqqeb"]
 length = 0.001
@@ -62,9 +57,9 @@ scale = Vector2(33.3711, 18.0234)
 texture = SubResource("GradientTexture2D_uq0k0")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(3.05176e-05, -104)
-scale = Vector2(13.0081, 5.68813)
-texture = SubResource("GradientTexture2D_qsi4b")
+position = Vector2(4, -91)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_06o6t")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -410.0
