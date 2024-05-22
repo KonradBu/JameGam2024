@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+var leftorright = false
+var up = false
+var down = false
+
 @export var speed = 400
 @export var friction = 0.3
 @export var acceleration = 0.1
@@ -68,7 +72,7 @@ func _process(delta):
 		_animated_sprite.play("Run Left")
 	elif Input.is_action_just_released("MoveLeft"):
 		_animated_sprite.play("Left Idle")
-		
+	
 	#throwing needle
 	if(Input.is_action_just_pressed("rightClick")):
 		var parent = get_parent().get_parent()
