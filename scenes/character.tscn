@@ -8,7 +8,7 @@ size = Vector2(81, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrkh1"]
 
-[node name="Character" type="Node2D"]
+[node name="Character" type="Node2D" groups=["player"]]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(0, 1)

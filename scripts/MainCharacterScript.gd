@@ -72,12 +72,10 @@ func _process(delta):
 	#throwing needle
 	if(Input.is_action_just_pressed("rightClick")):
 		var parent = get_parent().get_parent()
-		var children = parent.get_children()
-		if $needle in children:
-			var needleInstance = parent.get_node("needle") 
-			if needleInstance.velocity == 0:
-				currentState = state.retracting
-				position = position.move_toward(needleInstance.position, delta * retractspeed)
+		var needleInstance = parent.get_node_or_null("needle")
+		if needleInstance.velocity == 0:
+			currentState = state.retracting
+			position = position.move_toward(needleInstance.position, delta * retractspeed)
 	
 	#beeing able to move after the needle is thrown + deleting the needle
 	if currentState == state.retracting and position == $needle.position:
