@@ -30,47 +30,44 @@ func get_input():
 func _physics_process(_delta):
 	#moving
 	var direction = get_input()
+	
+	var left = false
+	var right = false
+	var front = false
+	var back = false
+	
 	if(currentState == state.walking):
 		if direction.length() > 0:
 			velocity = velocity.lerp(direction.normalized() * speed, acceleration)
 		else:
 			velocity = velocity.lerp(Vector2.ZERO, friction)
 		move_and_slide()
-
+	
 func _process(delta):
 	if currentState == state.dead:
 		#play death animation here
 		var startScene = load("res://scenes/roomEntrance.tscn")
+
+	#animations
+	if Input.is_action_pressed("MoveDown"):
+		_animated_sprite.play("Walk Down")
+	elif Input.is_action_just_released("MoveDown"):
+		_animated_sprite.play("front Idle")
 		
-	#dying
+	if Input.is_action_pressed("MoveUp"):
+		_animated_sprite.play("walk up")
+	elif Input.is_action_just_released("MoveUp"):
+		_animated_sprite.play("back Idle")
+		
+	if Input.is_action_pressed("MoveRight"):
+		_animated_sprite.play("Run")
+	elif Input.is_action_just_released("MoveRight"):
+		_animated_sprite.play("Right Idle")
 	
-	#animation processing
-	if currentState == state.walking:
-		if Input.is_action_pressed('MoveDown'):
-			_animated_sprite.stop()
-			_animated_sprite.play("Walk Down")
-		if Input.is_action_just_released('MoveDown'):
-			_animated_sprite.stop()
-			_animated_sprite.play("front Idle")
-		if Input.is_action_pressed('MoveUp'):
-			_animated_sprite.stop()
-			_animated_sprite.play("walk up")
-		if Input.is_action_just_released('MoveUp'):
-			_animated_sprite.stop()
-			_animated_sprite.play("back Idle")
-		if Input.is_action_pressed("MoveLeft"):
-			_animated_sprite.stop()
-			_animated_sprite.play("Run left")
-		if Input.is_action_just_released('MoveLeft'):
-			_animated_sprite.stop()
-			_animated_sprite.play("Left Idle")
-		if Input.is_action_pressed("MoveRight"):
-			_animated_sprite.stop()
-			_animated_sprite.play("Run right")
-		if Input.is_action_just_released('MoveRight'):
-			_animated_sprite.stop()
-			_animated_sprite.play("Right Idle")
-		
+	if Input.is_action_pressed("MoveLeft"):
+		_animated_sprite.play("Run Left")
+	elif Input.is_action_just_released("MoveLeft"):
+		_animated_sprite.play("Left Idle")
 		
 	#throwing needle
 	if(Input.is_action_just_pressed("rightClick")):

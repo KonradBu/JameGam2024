@@ -3,4 +3,4 @@ Authors:
 rakeaDev (Konrad Burgi)
 botthemew (Connor Walton)
 Vanaco (Keanu Gathy)
-Luc
+LucArtsymation
