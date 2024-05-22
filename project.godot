@@ -15,6 +15,10 @@ run/main_scene="res://scenes/cutscene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://textures/icon.svg"
 
+[display]
+
+mouse_cursor/custom_image="res://textures/needleTemp.png"
+
 [input]
 
 MoveUp={
