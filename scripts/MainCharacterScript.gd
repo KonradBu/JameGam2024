@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+var leftorright = false
+var up = false
+var down = false
+
 @export var speed = 400
 @export var friction = 0.3
 @export var acceleration = 0.1
@@ -57,6 +61,8 @@ func _process(delta):
 	elif Input.is_action_just_released("MoveLeft"):
 		_animated_sprite.play("Left Idle")
 		
+	
+	
 	if(Input.is_action_just_pressed("rightClick")):
 		canThrowNeedle = true
 		#rectracting the needle goes here
