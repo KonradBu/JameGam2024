@@ -67,7 +67,7 @@ func _process(delta):
 	if(Input.is_action_just_pressed("leftClick") and canThrowNeedle == true):
 		canThrowNeedle = false
 		var needle_instance = needleScene.instantiate()
-		var parent = get_parent()
+		var parent = get_parent().get_parent()
 		parent.add_child(needle_instance) 
 		var positionPlayer = get_global_position()
 		needle_instance.global_position = positionPlayer
