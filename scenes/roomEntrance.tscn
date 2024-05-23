@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://vao4ars2g64a"]
+[gd_scene load_steps=6 format=3 uid="uid://eyemhxdoyald"]
 
 [ext_resource type="Script" path="res://scripts/roomEntrance.gd" id="1_373hl"]
 [ext_resource type="PackedScene" uid="uid://bxiwxre5t1vfh" path="res://scenes/character.tscn" id="2_nx2yu"]
