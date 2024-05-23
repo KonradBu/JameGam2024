@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://sldqc0ca2aqp"]
+[gd_scene load_steps=8 format=3 uid="uid://sldqc0ca2aqp"]
 
 [ext_resource type="Script" path="res://scripts/roomFloor.gd" id="1_82uux"]
 [ext_resource type="PackedScene" uid="uid://bxiwxre5t1vfh" path="res://scenes/character.tscn" id="1_odpk8"]
+[ext_resource type="PackedScene" uid="uid://d1x3m3mnvxnoi" path="res://scenes/companion.tscn" id="3_fim78"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qrrnx"]
 size = Vector2(129.25, 1738.54)
@@ -56,3 +57,6 @@ collision_mask = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(713.539, -654.956)
 shape = SubResource("RectangleShape2D_frrhg")
+
+[node name="companion" parent="." instance=ExtResource("3_fim78")]
+position = Vector2(232, 378)

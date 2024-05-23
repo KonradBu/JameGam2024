@@ -4,6 +4,7 @@ extends Node2D
 @export var speed = 0.01
 enum state {alive, trapped, dead}
 var healthcheck = health
+var enemyspeed = 400
 
 # Change both!!!!
 enum type {skeleton, zombie, archer}
@@ -13,11 +14,24 @@ var amountOfEnemieTypes = 3
 var currentType
 var currentState
 var character
+var targetposition
 
 func _physics_process(delta):
-	if(currentState == state.alive):
-		look_at(character.global_position)
-		self.position = lerp(self.position,character.global_position,speed)
+	targetposition = find_target()
+	var new_position
+	match type:
+		type.archer:
+			if(position.distance_to(targetposition) > 100):
+				new_position = position.move_toward(targetposition, enemyspeed * delta)
+			else:
+				new_position = position.move_toward(targetposition, -enemyspeed * delta)
+		_:
+			new_position = position.move_toward(targetposition, enemyspeed * delta)
+	position = new_position
+	
+	#if(currentState == state.alive):
+	#	look_at(character.global_position)
+	#	self.position = lerp(self.position,character.global_position,speed)
 		
 
 func _ready():
@@ -50,6 +64,8 @@ func _process(delta):
 	if currentState == state.dead:
 		#change to dead animation
 		pass
+		
+	
 	
 func spawn():
 	var room = get_parent()
@@ -73,3 +89,19 @@ func hit(cause):
 			currentState = state.trapped
 		_:
 			health = 0
+
+func find_target():
+	var player = get_parent().get_node("Player")
+	var companion = get_parent().get_node("companion") 
+	var distanceToPlayer = position.distance_to(player.position)
+	var distanceToCompanion = position.distance_to(companion.position)
+	var target
+	if(distanceToCompanion > distanceToPlayer):
+		target = companion
+	else:
+		target = player
+	$find_new_target.start()
+	return target.position
+
+func _on_find_new_target_timeout():
+	targetposition = find_target()

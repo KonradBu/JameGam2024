@@ -26,3 +26,7 @@ show_percentage = false
 position = Vector2(-13.425, 0.00830054)
 scale = Vector2(3.59171, 14.2973)
 shape = SubResource("RectangleShape2D_rrch6")
+
+[node name="find_new_target" type="Timer" parent="."]
+
+[connection signal="timeout" from="find_new_target" to="." method="_on_find_new_target_timeout"]

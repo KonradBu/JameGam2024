@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://eyemhxdoyald"]
+[gd_scene load_steps=7 format=3 uid="uid://eyemhxdoyald"]
 
 [ext_resource type="Script" path="res://scripts/roomEntrance.gd" id="1_373hl"]
 [ext_resource type="PackedScene" uid="uid://bxiwxre5t1vfh" path="res://scenes/character.tscn" id="2_nx2yu"]
 [ext_resource type="PackedScene" uid="uid://vyt2vyb724xx" path="res://scenes/exit.tscn" id="3_506tg"]
+[ext_resource type="PackedScene" uid="uid://d1x3m3mnvxnoi" path="res://scenes/companion.tscn" id="4_al4rt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ltbh"]
 size = Vector2(129.25, 1738.54)
@@ -14,7 +15,7 @@ size = Vector2(3105.2, 129.25)
 script = ExtResource("1_373hl")
 
 [node name="Player" parent="." instance=ExtResource("2_nx2yu")]
-position = Vector2(324, 318)
+position = Vector2(403, 339)
 
 [node name="Exit" parent="." instance=ExtResource("3_506tg")]
 position = Vector2(790, 247)
@@ -55,5 +56,8 @@ collision_mask = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 position = Vector2(711.525, 1216.31)
 shape = SubResource("RectangleShape2D_qmp0n")
+
+[node name="companion" parent="." instance=ExtResource("4_al4rt")]
+position = Vector2(537, 322)
 
 [connection signal="roomCleared" from="." to="Exit" method="_on_entrance_room_cleared"]
