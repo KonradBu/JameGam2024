@@ -1,8 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://c1q765mi4q41p"]
+[gd_scene load_steps=7 format=3 uid="uid://c1q765mi4q41p"]
 
+<<<<<<< HEAD
+[ext_resource type="Texture2D" uid="uid://ufvakvjcq4pk" path="res://scripts/21704-heart-overview-outside.jpg" id="2_tqr8d"]
+[ext_resource type="Script" path="res://scenes/TileMap.gd" id="2_vxd01"]
+=======
 [ext_resource type="Script" path="res://scripts/minigame.gd" id="1_rcxnh"]
 [ext_resource type="Texture2D" uid="uid://ufvakvjcq4pk" path="res://textures/21704-heart-overview-outside.jpg" id="2_tqr8d"]
 [ext_resource type="Script" path="res://scripts/TileMap.gd" id="2_vxd01"]
+>>>>>>> 376e1fa8de425038fa3f6944e17e8233aba6202c
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjh00"]
 resource_name = "Bad cut!"
@@ -270,7 +275,6 @@ sources/1 = SubResource("TileSetAtlasSource_axu6m")
 sources/3 = SubResource("TileSetAtlasSource_f1hgu")
 
 [node name="minigame" type="Node2D"]
-script = ExtResource("1_rcxnh")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4bdo1")
