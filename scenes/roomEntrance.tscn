@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://vao4ars2g64a"]
+[gd_scene load_steps=5 format=3 uid="uid://vao4ars2g64a"]
 
 [ext_resource type="Script" path="res://scripts/roomEntrance.gd" id="1_373hl"]
 [ext_resource type="PackedScene" uid="uid://bxiwxre5t1vfh" path="res://scenes/character.tscn" id="2_nx2yu"]
 [ext_resource type="PackedScene" uid="uid://vyt2vyb724xx" path="res://scenes/exit.tscn" id="3_506tg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bshmc"]
+size = Vector2(30.9005, 20)
 
 [node name="Entrance" type="Node2D"]
 script = ExtResource("1_373hl")
@@ -14,4 +17,11 @@ position = Vector2(313, 220)
 position = Vector2(790, 247)
 rotation = 3.10902
 
-[connection signal="roomCleared" from="." to="Exit" method="_on_entrance_room_cleared"]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(1051, 456)
+scale = Vector2(-58.5155, 6.22965)
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(4.76797, 24.881)
+shape = SubResource("RectangleShape2D_bshmc")
