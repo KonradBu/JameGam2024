@@ -10,7 +10,6 @@ var down = false
 @export var canThrowNeedle = true
 @export var retractspeed = 600
 @export var health = 1
-@export var maxHealth = 5
 @onready var _animated_sprite = $Player
 signal needleThrown (mouseDirection, position)
 var needleScene: PackedScene = preload("res://scenes/needle.tscn")
@@ -103,7 +102,6 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("enemies"):
 		if currentState == state.walking:
 			health -= 1
-			$Healthbar.value -= 1
 			if health == 0:
 				currentState = state.dead
 		if currentState == state.retracting:
