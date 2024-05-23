@@ -29,7 +29,7 @@ func _input(event):
 			TextAnimation()
 			text = "Prove yourself worthy of the title, or you might just end up a failure!"
 			textCounter += 1
-		elif textCounter == 4:
+		elif textCounter == 5:
 			get_tree().change_scene_to_packed(menu)
 
 func TextAnimation():
