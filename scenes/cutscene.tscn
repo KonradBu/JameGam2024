@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/CutsceneText.gd" id="1_chrna"]
 
 [sub_resource type="Gradient" id="Gradient_tavak"]
-colors = PackedColorArray(0.25113, 3.05329e-07, 5.41471e-08, 1, 1, 1, 1, 1)
+colors = PackedColorArray(0.0694684, 3.64741e-08, 9.02452e-09, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_uq0k0"]
 gradient = SubResource("Gradient_tavak")
@@ -27,7 +27,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_x8t5l"]
 resource_name = "TextAppearing"
-length = 4.0
+length = 2.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -35,7 +35,7 @@ tracks/0/path = NodePath(".:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
+"times": PackedFloat32Array(0, 2.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-0.125, 1.0]
