@@ -2,6 +2,7 @@ extends Label
 
 var textCounter = 0
 @onready var animation_player = $AnimationPlayer
+var menu = preload("res://scenes/menu.tscn")
 
 func _ready():
 	TextAnimation()
@@ -36,6 +37,8 @@ func _input(event):
 			TextAnimation()
 			text = "Prove yourself worthy of the title, or you might just end up a failure!"
 			textCounter += 1
+		elif textCounter == 5:
+			get_tree().change_scene_to_packed(menu)
 
 func TextAnimation():
 	animation_player.play("TextAppearing")

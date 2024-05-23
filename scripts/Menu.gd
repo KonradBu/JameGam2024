@@ -3,8 +3,8 @@ extends Control
 
 
 func _on_play_pressed():
-	var entranceScene = preload("res://scenes/roomEntrance.tscn")
-	get_tree().change_scene_to_packed(entranceScene)
+	var world = preload("res://scenes/world.tscn")
+	get_tree().change_scene_to_packed(world)
 
 
 func _on_options_pressed():
