@@ -13,3 +13,5 @@ position = Vector2(313, 220)
 [node name="Exit" parent="." instance=ExtResource("3_506tg")]
 position = Vector2(790, 247)
 rotation = 3.10902
+
+[connection signal="roomCleared" from="." to="Exit" method="_on_entrance_room_cleared"]

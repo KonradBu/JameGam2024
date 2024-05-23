@@ -2,6 +2,7 @@ extends Label
 
 var textCounter = 0
 @onready var animation_player = $AnimationPlayer
+var menu = preload("res://scenes/menu.tscn")
 
 func _ready():
 	TextAnimation()
@@ -22,6 +23,8 @@ func _input(event):
 			TextAnimation()
 			text = "end of dialogue example, can add more in script (theres prob a better way to do this lol)"
 			textCounter += 1
+		elif textCounter == 4:
+			get_tree().change_scene_to_packed(menu)
 
 func TextAnimation():
 	animation_player.play("TextAppearing")
