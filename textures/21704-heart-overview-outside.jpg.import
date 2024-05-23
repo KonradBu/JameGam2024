@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ufvakvjcq4pk"
-path="res://.godot/imported/21704-heart-overview-outside.jpg-f57842db541829bd942f310fc357fb0e.ctex"
+path="res://.godot/imported/21704-heart-overview-outside.jpg-d0868ee22b4d3a7eff3c821e38acc266.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scripts/21704-heart-overview-outside.jpg"
-dest_files=["res://.godot/imported/21704-heart-overview-outside.jpg-f57842db541829bd942f310fc357fb0e.ctex"]
+source_file="res://textures/21704-heart-overview-outside.jpg"
+dest_files=["res://.godot/imported/21704-heart-overview-outside.jpg-d0868ee22b4d3a7eff3c821e38acc266.ctex"]
 
 [params]
 
