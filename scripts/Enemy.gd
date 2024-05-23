@@ -65,3 +65,11 @@ func randomspawnpoint(topleft, bottomright):
 	rng.randomize()
 	var spawnposition = Vector2(rng.randi_range(topleft.x + distanceFromWalls, bottomright.x - distanceFromWalls), rng.randi_range(topleft.y + distanceFromWalls, bottomright.y - distanceFromWalls))
 	return spawnposition
+
+func hit(cause):
+	match (cause):
+		"needle":
+			health -= 1
+			currentState = state.trapped
+		_:
+			health = 0
