@@ -1,30 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxiwxre5t1vfh"]
+[gd_scene load_steps=4 format=3 uid="uid://bxiwxre5t1vfh"]
 
 [ext_resource type="Script" path="res://scripts/MainCharacterScript.gd" id="1_qn8hq"]
 [ext_resource type="PackedScene" uid="uid://c2pfdqffyyxh8" path="res://scenes/Player.tscn" id="2_tfyuk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5g25"]
-size = Vector2(81, 81)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrkh1"]
+size = Vector2(20, 22.019)
 
 [node name="Character" type="Node2D" groups=["player"]]
-scale = Vector2(0.54642, 0.54642)
+scale = Vector2(0.372439, 0.372439)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(0, 1)
 script = ExtResource("1_qn8hq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0.500061, -0.499924)
-shape = SubResource("RectangleShape2D_l5g25")
-
 [node name="Player" parent="CharacterBody2D" instance=ExtResource("2_tfyuk")]
 position = Vector2(-0.999908, 1.00009)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-13.425, 0.00830054)
+scale = Vector2(3.59171, 14.2973)
+shape = SubResource("RectangleShape2D_wrkh1")
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(-13.425, 0.00830054)
+scale = Vector2(3.59171, 14.2973)
 shape = SubResource("RectangleShape2D_wrkh1")
 
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
