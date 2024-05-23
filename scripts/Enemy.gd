@@ -3,6 +3,7 @@ extends Node2D
 @export var health = 3
 @export var speed = 0.01
 enum state {alive, trapped, dead}
+var healthcheck = health
 
 # Change both!!!!
 enum type {skeleton, zombie, archer}
@@ -36,7 +37,9 @@ func _ready():
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(delta): 
+	if healthcheck != health:
+		$Healthbar.value = health
 	if currentState == state.trapped:
 		#change to trapped animation
 		pass
