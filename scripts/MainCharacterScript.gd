@@ -12,6 +12,7 @@ var down = false
 @export var health = 1
 @onready var _animated_sprite = $Player
 signal needleThrown (mouseDirection, position)
+
 var needleScene: PackedScene = preload("res://scenes/needle.tscn")
 var currentState
 enum state {walking, retracting, in_cutscene, dead}
@@ -74,7 +75,7 @@ func _process(delta):
 		_animated_sprite.play("Left Idle")
 	
 	#throwing needle
-	if(Input.is_action_just_pressed("rightClick")):
+	if Input.is_action_just_pressed("rightClick"):
 		var parent = get_parent().get_parent()
 		var needleInstance = parent.get_node_or_null("needle")
 		if needleInstance.velocity == 0:
@@ -85,9 +86,10 @@ func _process(delta):
 	if currentState == state.retracting and position == $needle.position:
 		currentState = state.walking
 		var parent = get_parent().get_parent()
+		var needleInstance = parent.get_node_or_null("needle")
 		var needle = parent.get_node("needle")
-		needle.free() 
-	
+		needle.free()
+			
 	#throwing the needle
 	if(Input.is_action_just_pressed("leftClick") and canThrowNeedle == true):
 		canThrowNeedle = false

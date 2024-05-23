@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ufvakvjcq4pk"
-path="res://.godot/imported/21704-heart-overview-outside.jpg-f57842db541829bd942f310fc357fb0e.ctex"
+uid="uid://1mup7ei2dkpn"
+path="res://.godot/imported/Timeline 1_0000.png-9cd237d167a70c7a44db24089346a0e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scripts/21704-heart-overview-outside.jpg"
-dest_files=["res://.godot/imported/21704-heart-overview-outside.jpg-f57842db541829bd942f310fc357fb0e.ctex"]
+source_file="res://Animations/Needle/Timeline 1_0000.png"
+dest_files=["res://.godot/imported/Timeline 1_0000.png-9cd237d167a70c7a44db24089346a0e5.ctex"]
 
 [params]
 
