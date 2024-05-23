@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ufvakvjcq4pk"
-path="res://.godot/imported/21704-heart-overview-outside.jpg-f57842db541829bd942f310fc357fb0e.ctex"
+uid="uid://b2fesk4u4jeuu"
+path="res://.godot/imported/temp_wall.jpeg-32ebd598df2bb91be6e22835c319bb23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scripts/21704-heart-overview-outside.jpg"
-dest_files=["res://.godot/imported/21704-heart-overview-outside.jpg-f57842db541829bd942f310fc357fb0e.ctex"]
+source_file="res://textures/temp_wall.jpeg"
+dest_files=["res://.godot/imported/temp_wall.jpeg-32ebd598df2bb91be6e22835c319bb23.ctex"]
 
 [params]
 

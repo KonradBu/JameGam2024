@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://ctlqe7mmq1psi"]
 
 [ext_resource type="Texture2D" uid="uid://b0cg7123vdqrr" path="res://Arts/cutscene thing.png" id="1_06o6t"]
-[ext_resource type="Texture2D" uid="uid://bcahyq6nx5uxv" path="res://Arts/cutscene thing 2.png" id="1_a3e0k"]
+[ext_resource type="Texture2D" path="res://Arts/cutscene thing 2.png" id="1_a3e0k"]
 [ext_resource type="Script" path="res://scripts/CutsceneText.gd" id="1_chrna"]
-[ext_resource type="Texture2D" uid="uid://cb8w8y0t8qujr" path="res://Arts/cutscene thing 3.png" id="3_c3jls"]
-[ext_resource type="Texture2D" uid="uid://3uaqx2q7uo8d" path="res://Arts/cutscene thing 4.png" id="4_fbo1f"]
+[ext_resource type="Texture2D" path="res://Arts/cutscene thing 3.png" id="3_c3jls"]
+[ext_resource type="Texture2D" path="res://Arts/cutscene thing 4.png" id="4_fbo1f"]
 
 [sub_resource type="Gradient" id="Gradient_tavak"]
 colors = PackedColorArray(0.0694684, 3.64741e-08, 9.02452e-09, 1, 1, 1, 1, 1)
