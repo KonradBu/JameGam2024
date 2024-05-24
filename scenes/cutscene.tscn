@@ -60,7 +60,6 @@ scale = Vector2(33.3711, 18.0234)
 texture = SubResource("GradientTexture2D_uq0k0")
 
 [node name="Cutscene1" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(-9, -93)
 scale = Vector2(0.515, 0.515)
 texture = ExtResource("1_a3e0k")
@@ -72,6 +71,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_06o6t")
 
 [node name="Cutscene3" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-16, -129)
 scale = Vector2(0.535, 0.535)
 texture = ExtResource("3_c3jls")
