@@ -25,9 +25,11 @@ func _physics_process(delta):
 				new_position = position.move_toward(targetposition, enemyspeed * tempdelta)
 			elif(position.distance_to(targetposition) < 70):
 				new_position = position.move_toward(targetposition, -enemyspeed * tempdelta)
+			else:
+				new_position = position
+		_:
 			new_position = position.move_toward(targetposition, enemyspeed * tempdelta)
 	position = new_position
-	
 	#if(currentState == state.alive):
 	#	look_at(character.global_position)
 	#	self.position = lerp(self.position,character.global_position,speed)
