@@ -4,7 +4,7 @@ var leftorright = false
 var up = false
 var down = false
 
-@export var speed = 400
+@export var speed = 170
 @export var friction = 0.3
 @export var acceleration = 0.1
 @export var canThrowNeedle = true

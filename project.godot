@@ -89,3 +89,7 @@ rightClick={
 2d_physics/layer_1="Wall Layer"
 2d_physics/layer_2="Player Layer"
 2d_physics/layer_3="Needle Layer"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
