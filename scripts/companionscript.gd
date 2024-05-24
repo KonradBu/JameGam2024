@@ -41,7 +41,7 @@ func find_target():
 		if child.is_in_group("enemy") and child.state != child.state.dead:
 			enemies.append(child)
 	var target
-	var targetposition = 100000
+	targetposition = 100000
 	if enemies != []:
 		for enemy in enemies:
 			if position.distance_to(enemy.position) < position.distance_to(targetposition):

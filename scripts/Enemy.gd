@@ -71,11 +71,12 @@ func spawn():
 	var room = get_parent()
 	var topleft = room.top_left
 	var bottomright = room.bottom_right
-	var character = get_node("../Player")
+	character = get_node("../Player")
 	var spawnposition = randomspawnpoint(topleft, bottomright)
 	while (spawnposition.distance_to(character.position) < 300):
 		spawnposition = randomspawnpoint(topleft, bottomright)
-		
+	position = spawnposition
+
 func randomspawnpoint(topleft, bottomright):
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()

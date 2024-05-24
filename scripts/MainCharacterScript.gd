@@ -36,10 +36,10 @@ func _physics_process(_delta):
 	#moving
 	var direction = get_input()
 	
-	var left = false
-	var right = false
-	var front = false
-	var back = false
+	#var left = false
+	#var right = false
+	#var front = false
+	#var back = false
 	
 	if(currentState == state.walking):
 		if direction.length() > 0:

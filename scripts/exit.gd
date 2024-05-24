@@ -14,8 +14,8 @@ func _process(delta):
 # Loading Next Room
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player") and roomIsCleared == true:
-		var room = get_parent()
-		var world = room.get_parent()
+		room = get_parent()
+		world = room.get_parent()
 		roomIsCleared = false
 		world.loadnextroom()
 			
