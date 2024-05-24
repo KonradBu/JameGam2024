@@ -25,25 +25,25 @@ func generate(roomSeed):
 					if !dungeon.has(newRoomPosition):
 						dungeon[newRoomPosition] = room.instantiate()
 						size -= 1
-					connect_rooms(dungeon.get(i), dungeon.get(newRoomPosition),Vector2(1, 0))
+					connect_rooms(dungeon.get(i), dungeon.get(newRoomPosition),[1,0])
 				elif direction < 2:
 					var newRoomPosition = i + Vector2(-1, 0)
 					if !dungeon.has(newRoomPosition):
 						dungeon[newRoomPosition] = room.instantiate()
 						size -= 1
-					connect_rooms(dungeon.get(i), dungeon.get(newRoomPosition),Vector2(-1, 0))
+					connect_rooms(dungeon.get(i), dungeon.get(newRoomPosition),[-1,0])
 				elif direction < 3:
 					var newRoomPosition = i + Vector2(0, 1)
 					if !dungeon.has(newRoomPosition):
 						dungeon[newRoomPosition] = room.instantiate()
 						size -= 1
-					connect_rooms(dungeon.get(i), dungeon.get(newRoomPosition),Vector2(0, 1))
+					connect_rooms(dungeon.get(i), dungeon.get(newRoomPosition),[0, 1])
 				elif direction < 4:
 					var newRoomPosition = i + Vector2(0, -1)
 					if !dungeon.has(newRoomPosition):
 						dungeon[newRoomPosition] = room.instantiate()
 						size -= 1
-					connect_rooms(dungeon.get(i), dungeon.get(newRoomPosition),Vector2(0, -1))
+					connect_rooms(dungeon.get(i), dungeon.get(newRoomPosition),[0, -1])
 	return dungeon
 
 func connect_rooms(room1, room2, direction):
