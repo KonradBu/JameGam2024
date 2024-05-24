@@ -4,7 +4,7 @@ extends Node2D
 @export var speed = 0.01
 enum state {alive, trapped, dead}
 var healthcheck = health
-var enemyspeed = 400
+var enemyspeed = 100
 
 # Change both!!!!
 enum type {skeleton, zombie, archer}
@@ -14,19 +14,19 @@ var amountOfEnemieTypes = 3
 var currentType
 var currentState
 var character
-var targetposition
+var targetposition = Vector2(0,0)
+var tempdelta = 0.0
 
 func _physics_process(delta):
-	targetposition = find_target()
 	var new_position
 	match type:
 		type.archer:
 			if(position.distance_to(targetposition) > 100):
-				new_position = position.move_toward(targetposition, enemyspeed * delta)
-			else:
-				new_position = position.move_toward(targetposition, -enemyspeed * delta)
+				new_position = position.move_toward(targetposition, enemyspeed * tempdelta)
+			elif(position.distance_to(targetposition) < 70):
+				new_position = position.move_toward(targetposition, -enemyspeed * tempdelta)
 		_:
-			new_position = position.move_toward(targetposition, enemyspeed * delta)
+			new_position = position.move_toward(targetposition, enemyspeed * tempdelta)
 	position = new_position
 	
 	#if(currentState == state.alive):
@@ -48,10 +48,11 @@ func _ready():
 		var archer_texture = load("res://textures/archer.png")
 		$Sprite2D.texture = archer_texture
 	spawn()
-		
+	targetposition = find_target()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): 
+	tempdelta = delta
 	if healthcheck != health:
 		$Healthbar.value = health
 	if currentState == state.trapped:
@@ -64,7 +65,7 @@ func _process(delta):
 	if currentState == state.dead:
 		#change to dead animation
 		pass
-		
+	
 	
 	
 func spawn():
@@ -102,7 +103,7 @@ func find_target():
 	else:
 		target = player
 	$find_new_target.start()
-	return target.position
+	targetposition = target.position
 
 func _on_find_new_target_timeout():
 	targetposition = find_target()

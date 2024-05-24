@@ -14,12 +14,25 @@ var currentLeg = legParts.default
 var currentHead = headParts.default
 var currentTorso = torsoParts.default
 
+enum state {alive, dead}
+enum attackingstate {attacking, followingplayer} 
+
+var currentstate
+var currentattackingstate
 
 var targetposition
 
 func _on_ready():
+	currentstate = state.alive
 	targetposition = find_target()
-	var newposition = position.move_toward(targetposition, companionSpeed)
+	var newposition
+	if currentattackingstate == attackingstate.attacking:
+		newposition = position.move_toward(targetposition, companionSpeed)
+	else:
+		if position.distance_to(targetposition > 200):
+			newposition = position.move_toward(targetposition, companionSpeed)
+		else:
+			newposition = position.move_toward(targetposition, -companionSpeed)
 	position = newposition
 	
 func _physics_process(delta):
@@ -43,10 +56,15 @@ func find_target():
 	var target
 	targetposition = 100000
 	if enemies != []:
+		currentattackingstate = attackingstate.attacking
 		for enemy in enemies:
 			if position.distance_to(enemy.position) < position.distance_to(targetposition):
 				target = enemy
 				targetposition = enemy.position
+	else:
+		currentattackingstate = attackingstate.followingplayer
+		var player = get_parent().get_node("Player")
+		
 	$find_new_target.start
 	return targetposition
 

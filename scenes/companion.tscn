@@ -13,6 +13,7 @@ collision_mask = 3
 script = ExtResource("1_q1all")
 
 [node name="find_new_target" type="Timer" parent="CharacterBody2D"]
+wait_time = 0.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_ol3o7")
