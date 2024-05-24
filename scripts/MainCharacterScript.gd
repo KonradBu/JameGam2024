@@ -11,9 +11,9 @@ var down = false
 @export var retractspeed = 600
 @export var health = 1
 @onready var _animated_sprite = $Player
+signal needleThrown (mouseDirection, position)
 
-
-var needle_instance
+var needleScene: PackedScene = preload("res://scenes/needle.tscn")
 var currentState
 enum state {walking, retracting, in_cutscene, dead}
 	
@@ -74,28 +74,31 @@ func _process(delta):
 	elif Input.is_action_just_released("MoveLeft"):
 		_animated_sprite.play("Left Idle")
 	
+	#throwing needle
+	if Input.is_action_just_pressed("rightClick"):
+		var parent = get_parent().get_parent()
+		var needleInstance = parent.get_node_or_null("needle")
+		if needleInstance.velocity == 0:
+			currentState = state.retracting
+			position = position.move_toward(needleInstance.position, delta * retractspeed)
 	
+	#beeing able to move after the needle is thrown + deleting the needle
+	if currentState == state.retracting and position == $needle.position:
+		currentState = state.walking
+		var parent = get_parent().get_parent()
+		var needleInstance = parent.get_node_or_null("needle")
+		var needle = parent.get_node("needle")
+		needle.free()
+			
 	#throwing the needle
 	if(Input.is_action_just_pressed("leftClick") and canThrowNeedle == true):
-		var needleScene: PackedScene = preload("res://scenes/needle.tscn")
 		canThrowNeedle = false
-		needle_instance = needleScene.instantiate()
-		var room = get_parent().get_parent()
-		room.add_child(needle_instance) 
+		var needle_instance = needleScene.instantiate()
+		var parent = get_parent().get_parent()
+		parent.add_child(needle_instance) 
 		var positionPlayer = get_global_position()
 		needle_instance.global_position = positionPlayer
 
-	#throwing needle
-	if Input.is_action_just_pressed("rightClick"):
-		if needle_instance.get_velocity().x == 0 and needle_instance.get_velocity().y:
-			currentState = state.retracting
-			position = position.move_toward(needle_instance.position, delta * retractspeed)
-	
-	#beeing able to move after the needle is thrown + deleting the needle
-	if currentState == state.retracting and position == needle_instance.position:
-		currentState = state.walking
-		needle_instance.free()
-		
 #collision detection and dying
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("enemies"):

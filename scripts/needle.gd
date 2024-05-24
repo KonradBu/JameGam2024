@@ -1,25 +1,19 @@
 extends CharacterBody2D
-@export var needleSpeed = 1000
+@export var needleSpeed = 4000
 @onready var animated_sprite_2d = $AnimatedSprite2D
-var mousePosition
+@onready var ray_cast_2d = $RayCast2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	mousePosition = get_global_mouse_position()
+	var mousePosition = get_viewport().get_mouse_position()
 	look_at(mousePosition)
-	var direction = (mousePosition - get_global_position()).normalized()
-	print(direction)
-	velocity = direction * needleSpeed
+
+func _physics_process(delta):
+	position += transform.x * needleSpeed * delta
 	animated_sprite_2d.play("Spin")
 	
-func _process(delta):
-	if (velocity.length() < 1000):
-		animated_sprite_2d.stop()
+	if ray_cast_2d.is_colliding() == true:
+		velocity.x = 0
+		velocity.y = 0
 		
-func _physics_process(delta):
-	move_and_collide(velocity * delta)
 
-
-func _on_area_2d_body_entered(body):
-	if (body.is_in_group("enemy")):
-		body.got_hit("needle")

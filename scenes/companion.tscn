@@ -1,25 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1x3m3mnvxnoi"]
+[gd_scene load_steps=3 format=3 uid="uid://d1x3m3mnvxnoi"]
 
 [ext_resource type="Script" path="res://scripts/companionscript.gd" id="1_q1all"]
-[ext_resource type="Texture2D" uid="uid://dwkfvg0xll5gg" path="res://textures/companion.png" id="2_f4cbo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ol3o7"]
 
 [node name="companion" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-collision_layer = 2
-collision_mask = 3
 script = ExtResource("1_q1all")
-
-[node name="find_new_target" type="Timer" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_ol3o7")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(-1, 0)
-scale = Vector2(0.829412, 0.829412)
-texture = ExtResource("2_f4cbo")
-
-[connection signal="timeout" from="CharacterBody2D/find_new_target" to="CharacterBody2D" method="_on_find_new_target_timeout"]
