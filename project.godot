@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="JameGam2024"
-run/main_scene="res://scenes/cutscene.tscn"
+run/main_scene="res://scenes/Dungeon.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://textures/icon.svg"
+
+[autoload]
+
+DungeonGenerator="*res://scripts/DungeonGenerator.gd"
 
 [display]
 
