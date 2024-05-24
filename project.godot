@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="JameGam2024"
-run/main_scene="res://scenes/Dungeon.tscn"
+run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://textures/icon.svg"
 
@@ -22,6 +22,7 @@ DungeonGenerator="*res://scripts/DungeonGenerator.gd"
 [display]
 
 mouse_cursor/custom_image="res://textures/custom_cursor_0000.png"
+mouse_cursor/custom_image_hotspot=Vector2(64, 135)
 
 [input]
 
