@@ -11,6 +11,8 @@ scale = Vector2(0.372439, 0.372439)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(0, 1)
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_qn8hq")
 
 [node name="Player" parent="CharacterBody2D" instance=ExtResource("2_tfyuk")]
