@@ -46,8 +46,9 @@ func _physics_process(_delta):
 			velocity = velocity.lerp(direction.normalized() * speed, acceleration)
 		else:
 			velocity = velocity.lerp(Vector2.ZERO, friction)
-		move_and_slide()
 	
+	move_and_slide()
+		
 func _process(delta):
 	if currentState == state.dead:
 		#play death animation here
@@ -64,15 +65,24 @@ func _process(delta):
 	elif Input.is_action_just_released("MoveUp"):
 		_animated_sprite.play("back Idle")
 		
-	if Input.is_action_pressed("MoveRight"):
+	if Input.is_action_pressed("MoveRight") and not Input.is_action_pressed("MoveDown") and not Input.is_action_pressed("MoveUp"):
 		_animated_sprite.play("Run")
 	elif Input.is_action_just_released("MoveRight"):
 		_animated_sprite.play("Right Idle")
+		if Input.is_action_just_released("MoveDown"):
+			_animated_sprite.play("front Idle")
+		if Input.is_action_just_released("MoveUp"):
+			_animated_sprite.play("back Idless")
 	
-	if Input.is_action_pressed("MoveLeft"):
+	if Input.is_action_pressed("MoveLeft") and not Input.is_action_pressed("MoveDown") and not Input.is_action_pressed("MoveUp"):
 		_animated_sprite.play("Run Left")
 	elif Input.is_action_just_released("MoveLeft"):
 		_animated_sprite.play("Left Idle")
+		if Input.is_action_just_released("MoveDown"):
+			_animated_sprite.play("front Idle")
+		if Input.is_action_just_released("MoveUp"):
+			_animated_sprite.play("back Idle")
+	
 	
 	
 	#throwing the needle

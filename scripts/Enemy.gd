@@ -25,7 +25,6 @@ func _physics_process(delta):
 				new_position = position.move_toward(targetposition, enemyspeed * tempdelta)
 			elif(position.distance_to(targetposition) < 70):
 				new_position = position.move_toward(targetposition, -enemyspeed * tempdelta)
-		_:
 			new_position = position.move_toward(targetposition, enemyspeed * tempdelta)
 	position = new_position
 	

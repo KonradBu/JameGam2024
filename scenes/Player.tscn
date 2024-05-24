@@ -5,6 +5,6 @@
 [node name="Player" type="AnimatedSprite2D"]
 scale = Vector2(0.4, 0.4)
 sprite_frames = ExtResource("1_yoyb5")
-animation = &"Left Idle"
+animation = &"front Idle"
 autoplay = "front Idle"
-frame_progress = 0.311597
+frame_progress = 0.0385878
