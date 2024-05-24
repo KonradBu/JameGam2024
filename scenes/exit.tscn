@@ -12,6 +12,7 @@ size = Vector2(62, 213)
 script = ExtResource("1_tarlg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 6
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 
@@ -20,6 +21,7 @@ position = Vector2(0, 69.5)
 shape = SubResource("RectangleShape2D_v3y1c")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(42, 67.5)

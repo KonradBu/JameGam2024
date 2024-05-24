@@ -1,47 +1,30 @@
-<<<<<<< HEAD
-[gd_scene load_steps=5 format=3 uid="uid://vao4ars2g64a"]
-=======
-[gd_scene load_steps=6 format=3 uid="uid://vao4ars2g64a"]
->>>>>>> 376e1fa8de425038fa3f6944e17e8233aba6202c
+[gd_scene load_steps=7 format=3 uid="uid://eyemhxdoyald"]
 
 [ext_resource type="Script" path="res://scripts/roomEntrance.gd" id="1_373hl"]
 [ext_resource type="PackedScene" uid="uid://bxiwxre5t1vfh" path="res://scenes/character.tscn" id="2_nx2yu"]
 [ext_resource type="PackedScene" uid="uid://vyt2vyb724xx" path="res://scenes/exit.tscn" id="3_506tg"]
+[ext_resource type="PackedScene" uid="uid://d1x3m3mnvxnoi" path="res://scenes/companion.tscn" id="4_al4rt"]
 
-<<<<<<< HEAD
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bshmc"]
-size = Vector2(30.9005, 20)
-=======
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ltbh"]
 size = Vector2(129.25, 1738.54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmp0n"]
 size = Vector2(3105.2, 129.25)
->>>>>>> 376e1fa8de425038fa3f6944e17e8233aba6202c
 
 [node name="Entrance" type="Node2D"]
 script = ExtResource("1_373hl")
 
 [node name="Player" parent="." instance=ExtResource("2_nx2yu")]
-position = Vector2(324, 318)
+position = Vector2(403, 339)
 
 [node name="Exit" parent="." instance=ExtResource("3_506tg")]
 position = Vector2(790, 247)
 rotation = 3.10902
 
-<<<<<<< HEAD
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(1051, 456)
-scale = Vector2(-58.5155, 6.22965)
-collision_layer = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(4.76797, 24.881)
-shape = SubResource("RectangleShape2D_bshmc")
-=======
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(313, 220)
 scale = Vector2(0.372439, 0.372439)
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-904.845, 281.254)
@@ -50,6 +33,7 @@ shape = SubResource("RectangleShape2D_1ltbh")
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(313, 220)
 scale = Vector2(0.372439, 0.372439)
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(2317.16, 279.24)
@@ -58,6 +42,7 @@ shape = SubResource("RectangleShape2D_1ltbh")
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(313, 220)
 scale = Vector2(0.372439, 0.372439)
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(713.539, -654.956)
@@ -66,10 +51,13 @@ shape = SubResource("RectangleShape2D_qmp0n")
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 position = Vector2(313, 220)
 scale = Vector2(0.372439, 0.372439)
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 position = Vector2(711.525, 1216.31)
 shape = SubResource("RectangleShape2D_qmp0n")
 
+[node name="companion" parent="." instance=ExtResource("4_al4rt")]
+position = Vector2(537, 322)
+
 [connection signal="roomCleared" from="." to="Exit" method="_on_entrance_room_cleared"]
->>>>>>> 376e1fa8de425038fa3f6944e17e8233aba6202c
