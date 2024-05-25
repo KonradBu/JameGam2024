@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dccndrsdcc0df"]
+[gd_scene load_steps=11 format=3 uid="uid://dccndrsdcc0df"]
 
 [ext_resource type="Script" path="res://scripts/needle.gd" id="1_bnp4x"]
 [ext_resource type="Texture2D" uid="uid://1mup7ei2dkpn" path="res://Animations/Needle/Timeline 1_0000.png" id="2_a6oc4"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://7er4xb4cm2jx" path="res://Animations/Needle/static needle_0000.png" id="7_m40ld"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3720"]
-size = Vector2(8.99734, 53.4986)
+size = Vector2(8.99734, 41.748)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_51nna"]
 animations = [{
@@ -42,28 +42,33 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
-rotation = 1.56947
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pynf5"]
+size = Vector2(52.0026, 10.0013)
 
-[node name="Needle" type="CharacterBody2D" parent="."]
+[node name="Needle" type="CharacterBody2D"]
+rotation = 1.56947
+collision_layer = 4
 script = ExtResource("1_bnp4x")
 
-[node name="Area2D" type="Area2D" parent="Needle"]
-
-[node name="AreaCollision" type="CollisionShape2D" parent="Needle/Area2D"]
-position = Vector2(-0.503978, -1.75067)
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(5.87532, 2.56579e-07)
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_m3720")
 
-[node name="RayCast2D" type="RayCast2D" parent="Needle"]
-target_position = Vector2(0.0437672, -33)
-collision_mask = 2
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Needle"]
-position = Vector2(1.00663, -4.99867)
-rotation = -1.5708
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.997347, -2.00132)
+rotation = 3.14159
 scale = Vector2(0.105, 0.105)
 sprite_frames = SubResource("SpriteFrames_51nna")
 animation = &"Spin"
-frame_progress = 0.0788842
+frame_progress = 0.894051
 
-[node name="Line2D" type="Line2D" parent="Needle"]
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.00265, -0.000663041)
+shape = SubResource("RectangleShape2D_pynf5")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

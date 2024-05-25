@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dixqk88katq8m"]
+
+[ext_resource type="Texture2D" uid="uid://do5nmgfh7kvm" path="res://Arts/minigame.png" id="1_sqv14"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwfed"]
+texture = ExtResource("1_sqv14")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+4:0/size_in_atlas = Vector2i(4, 4)
+4:0/0 = 0
+8:0/size_in_atlas = Vector2i(4, 4)
+8:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_aghba"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_fwfed")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_aghba")
+rendering_quadrant_size = 128
+format = 2
+layer_0/tile_data = PackedInt32Array(-196603, 524288, 0)
