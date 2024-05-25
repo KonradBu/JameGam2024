@@ -10,15 +10,19 @@ var down = false
 @export var canThrowNeedle = true
 @export var retractspeed = 600
 @export var health = 1
+@export var hitknockback = 25
 @onready var _animated_sprite = $Player
 
 
 var needle_instance
 var currentState
 enum state {walking, retracting, in_cutscene, dead}
-	
-func _init():
+var world
+
+
+func _ready():
 	currentState = state.walking
+	world = get_tree().root.get_node("world")
 
 func get_input():
 	var input = Vector2()
@@ -51,8 +55,7 @@ func _physics_process(_delta):
 		
 func _process(delta):
 	if currentState == state.dead:
-		#play death animation here
-		var startScene = load("res://scenes/roomEntrance.tscn")
+		world.die()
 
 	#animations
 	if Input.is_action_pressed("MoveDown"):
@@ -106,13 +109,8 @@ func _process(delta):
 		currentState = state.walking
 		needle_instance.free()
 		
-#collision detection and dying
+
 func _on_area_2d_body_entered(body):
-	if body.is_in_group("enemies"):
-		if currentState == state.walking:
-			health -= 1
-			if health == 0:
-				currentState = state.dead
-		if currentState == state.retracting:
-			body.currentState = body.state.trapped
-			body.health -= 1
+	if (body.is_in_group("enemy")):
+		currentState = state.dead
+		print ("die")

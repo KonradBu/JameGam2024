@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://eyemhxdoyald"]
+[gd_scene load_steps=8 format=3 uid="uid://eyemhxdoyald"]
 
 [ext_resource type="Script" path="res://scripts/roomEntrance.gd" id="1_373hl"]
 [ext_resource type="PackedScene" uid="uid://bxiwxre5t1vfh" path="res://scenes/character.tscn" id="2_nx2yu"]
 [ext_resource type="PackedScene" uid="uid://vyt2vyb724xx" path="res://scenes/exit.tscn" id="3_506tg"]
 [ext_resource type="PackedScene" uid="uid://d1x3m3mnvxnoi" path="res://scenes/companion.tscn" id="4_al4rt"]
+[ext_resource type="Texture2D" uid="uid://db8fm861qwfa3" path="res://textures/icon.svg" id="5_awohc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ltbh"]
 size = Vector2(129.25, 1738.54)
@@ -59,5 +60,10 @@ shape = SubResource("RectangleShape2D_qmp0n")
 
 [node name="companion" parent="." instance=ExtResource("4_al4rt")]
 position = Vector2(537, 322)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(197.5, 186.5)
+scale = Vector2(0.570313, 0.570313)
+texture = ExtResource("5_awohc")
 
 [connection signal="roomCleared" from="." to="Exit" method="_on_entrance_room_cleared"]

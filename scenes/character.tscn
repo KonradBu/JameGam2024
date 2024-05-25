@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxiwxre5t1vfh"]
+[gd_scene load_steps=6 format=3 uid="uid://bxiwxre5t1vfh"]
 
+[ext_resource type="Script" path="res://scripts/charactergetter.gd" id="1_1vg7d"]
 [ext_resource type="Script" path="res://scripts/MainCharacterScript.gd" id="1_qn8hq"]
 [ext_resource type="PackedScene" uid="uid://c2pfdqffyyxh8" path="res://scenes/Player.tscn" id="2_tfyuk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrkh1"]
 size = Vector2(20, 19.7188)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qm6l"]
+size = Vector2(136.935, 370.531)
+
 [node name="Character" type="Node2D" groups=["player"]]
 scale = Vector2(0.372439, 0.372439)
+script = ExtResource("1_1vg7d")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(0, 1)
@@ -23,15 +28,15 @@ position = Vector2(-13.425, 3.02751)
 scale = Vector2(3.59171, 14.2973)
 shape = SubResource("RectangleShape2D_wrkh1")
 
-[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
-position = Vector2(-13.425, 0.00830054)
-scale = Vector2(3.59171, 14.2973)
-shape = SubResource("RectangleShape2D_wrkh1")
-
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-14.7675, -3.84093e-06)
+scale = Vector2(0.999998, 0.999998)
+shape = SubResource("RectangleShape2D_0qm6l")
+
+[connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
