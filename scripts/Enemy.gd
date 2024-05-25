@@ -14,11 +14,12 @@ var amountOfEnemieTypes = 3
 var currentType
 var currentState
 var character
-var targetposition = Vector2(0,0)
+var targetposition
 var tempdelta = 0.0
 
 func _physics_process(delta):
 	var new_position
+	print (targetposition)
 	match type:
 		type.archer:
 			if(position.distance_to(targetposition) > 100):
@@ -104,7 +105,7 @@ func find_target():
 	else:
 		target = player
 	$find_new_target.start()
-	targetposition = target.position
+	return target.position
 
 func _on_find_new_target_timeout():
 	targetposition = find_target()
