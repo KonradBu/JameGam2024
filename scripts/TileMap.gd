@@ -7,7 +7,7 @@ func _physics_process(_delta):
 	var tile_pos = local_to_map(mouse_pos_local)
 	var tile_id = get_cell_source_id(0, tile_pos)
 	if tile_id == 0:
-		patient_health-=0.1
+		patient_health-=1
 	if tile_id== 3:
 		var tile : Vector2 = local_to_map(get_global_mouse_position())
 		set_cell(0,tile,2)
