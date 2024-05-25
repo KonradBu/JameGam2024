@@ -30,7 +30,6 @@ func _physics_process(delta):
 		_:
 			new_position = position.move_toward(targetposition, enemyspeed * delta)
 	position = new_position
-	
 	#if(currentState == state.alive):
 	#	look_at(character.global_position)
 	#	self.position = lerp(self.position,character.global_position,speed)
