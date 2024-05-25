@@ -44,9 +44,9 @@ func _physics_process(delta):
 	var new_position
 	match currentType:
 		type.archer:
-			if(position.distance_to(targetposition) > 100):
+			if(position.distance_to(targetposition) > 500):
 				new_position = position.move_toward(targetposition, enemyspeed * delta)
-			elif(position.distance_to(targetposition) < 70):
+			elif(position.distance_to(targetposition) < 450):
 				new_position = position.move_toward(targetposition, -enemyspeed * delta)
 			else:
 				new_position = position
@@ -83,9 +83,7 @@ func _process(delta):
 		target = player
 	else:
 		target = companion
-	print (target.name)
 	targetposition = target.get_position_body()
-	print (targetposition)
 
 func spawn():
 	var room = get_parent()

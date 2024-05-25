@@ -8,7 +8,7 @@
 size = Vector2(20, 22.019)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0qm6l"]
-size = Vector2(389.326, 563.851)
+size = Vector2(136.935, 370.531)
 
 [node name="Character" type="Node2D" groups=["player"]]
 scale = Vector2(0.372439, 0.372439)
@@ -35,8 +35,8 @@ position_smoothing_enabled = true
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-25.5075, 10.74)
-scale = Vector2(0.999999, 0.999999)
+position = Vector2(-14.7675, -3.84093e-06)
+scale = Vector2(0.999998, 0.999998)
 shape = SubResource("RectangleShape2D_0qm6l")
 
 [connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
