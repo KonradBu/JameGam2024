@@ -272,7 +272,53 @@ sources/3 = SubResource("TileSetAtlasSource_f1hgu")
 [node name="minigame" type="Node2D"]
 script = ExtResource("1_rcxnh")
 
+[node name="TileMap5" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4bdo1")
+format = 2
+script = ExtResource("2_vxd01")
+
 [node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4bdo1")
+format = 2
+script = ExtResource("2_vxd01")
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4bdo1")
+format = 2
+script = ExtResource("2_vxd01")
+
+[node name="TileMap3" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4bdo1")
+format = 2
+script = ExtResource("2_vxd01")
+
+[node name="TileMap4" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4bdo1")
+format = 2
+script = ExtResource("2_vxd01")
+
+[node name="TileMap6" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4bdo1")
+format = 2
+script = ExtResource("2_vxd01")
+
+[node name="TileMap7" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4bdo1")
+format = 2
+layer_0/tile_data = PackedInt32Array(196599, 2031616, 7, 262138, 1900544, 6, 262141, 2097152, 6)
+script = ExtResource("2_vxd01")
+
+[node name="TileMap8" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4bdo1")
+format = 2
+script = ExtResource("2_vxd01")
+
+[node name="TileMap9" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4bdo1")
+format = 2
+script = ExtResource("2_vxd01")
+
+[node name="TileMap10" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4bdo1")
 format = 2
 script = ExtResource("2_vxd01")
