@@ -66,7 +66,7 @@ func find_target():
 		currentattackingstate = attackingstate.followingplayer
 		var player = get_parent().get_node("Player")
 		
-	$find_new_target.start
+	$find_new_target.start()
 	return targetposition
 
 func _on_find_new_target_timeout():

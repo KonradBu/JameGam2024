@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1x3m3mnvxnoi"]
+[gd_scene load_steps=5 format=3 uid="uid://d1x3m3mnvxnoi"]
 
+[ext_resource type="Script" path="res://scripts/companiongetter.gd" id="1_24nbc"]
 [ext_resource type="Script" path="res://scripts/companionscript.gd" id="1_q1all"]
 [ext_resource type="Texture2D" uid="uid://dwkfvg0xll5gg" path="res://textures/companion.png" id="2_f4cbo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ol3o7"]
 
 [node name="companion" type="Node2D"]
+script = ExtResource("1_24nbc")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 collision_layer = 2
@@ -13,7 +15,7 @@ collision_mask = 3
 script = ExtResource("1_q1all")
 
 [node name="find_new_target" type="Timer" parent="CharacterBody2D"]
-wait_time = 0.3
+wait_time = 0.1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_ol3o7")

@@ -41,7 +41,7 @@ func spawn_enemies():
 		lowerRange = 2
 		upperRange = clearedRoomCounter +2
 	var randomEnemies = rng.randi_range(lowerRange, upperRange)
-	currentroom.set_enemy_count(randomEnemies)
+	enemycount = randomEnemies
 	var enemyScene = preload("res://scenes/enemy.tscn")
 	for i in range(randomEnemies):
 		var enemyinstance = enemyScene.instantiate()
@@ -50,5 +50,5 @@ func spawn_enemies():
 func set_roomIsCleared (status):
 	roomIsCleared = status
 	
-func set_enemycount (i):
-	enemycount = i
+func minus_enemycount ():
+	enemycount -= 1

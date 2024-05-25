@@ -16,8 +16,8 @@ func _process(delta):
 		pass
 		
 		
-func set_enemy_count(i):
-	world.set_enemycount(i)
+func minus_enemy_count():
+	world.minus_enemycount()
 
 func set_roomIsCleared(status):
 	roomIsCleared = status
