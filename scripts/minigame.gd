@@ -16,7 +16,7 @@ func hide_maps(maps):
 		map.visible=false
 func show_random_map(maps):
 	var selected_map=randi_range(0,9)
-	hide_maps(maps)
 	maps[selected_map].visible=true
 func _ready():
+	hide_maps(tilemaps)
 	show_random_map(tilemaps)
