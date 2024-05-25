@@ -1,6 +1,7 @@
 extends Control
 
 var hasWatchedCutscene = false
+@onready var credits = $Credits
 
 func _on_play_pressed():
 	var world = preload("res://scenes/world.tscn")
@@ -18,3 +19,9 @@ func _on_options_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+	
+func _on_credits_pressed():
+	credits.visible = true
+
+func _on_exit_credits_pressed():
+	credits.visible = false

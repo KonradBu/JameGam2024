@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dk3nwt533nyr2"]
+[gd_scene load_steps=8 format=3 uid="uid://dk3nwt533nyr2"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_krtr7"]
 [ext_resource type="Texture2D" uid="uid://dmvwos8urlmpt" path="res://Arts/menu bg.png" id="2_vteap"]
@@ -9,6 +9,17 @@ font_weight = 425
 
 [sub_resource type="SystemFont" id="SystemFont_naklt"]
 font_names = PackedStringArray("MS Gothic")
+
+[sub_resource type="Gradient" id="Gradient_uas54"]
+colors = PackedColorArray(0, 0, 0, 0.756863, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4tdm8"]
+gradient = SubResource("Gradient_uas54")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_xjnc7"]
+font_names = PackedStringArray("Fantasy")
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -99,6 +110,18 @@ theme_override_font_sizes/font_size = 64
 text = "OPTIONS"
 flat = true
 
+[node name="Credits" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.34902, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.294118, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.188235, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_naklt")
+theme_override_font_sizes/font_size = 64
+text = "CREDITS"
+flat = true
+
 [node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
@@ -111,6 +134,159 @@ theme_override_font_sizes/font_size = 64
 text = "Quit"
 flat = true
 
+[node name="Credits" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_4tdm8")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Saperator" type="Control" parent="Credits/HBoxContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 80
+
+[node name="ExitCredits" type="Button" parent="Credits/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.184314, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.25098, 0, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_font_sizes/font_size = 120
+text = "X"
+flat = true
+
+[node name="Label" type="Label" parent="Credits/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.654902, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.231373, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_constants/shadow_outline_size = 40
+theme_override_fonts/font = SubResource("SystemFont_xjnc7")
+theme_override_font_sizes/font_size = 110
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Credits/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="Saperator" type="Control" parent="Credits/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label2" type="Label" parent="Credits/HBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.654902, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.231373, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_constants/shadow_outline_size = 40
+theme_override_fonts/font = SubResource("SystemFont_xjnc7")
+theme_override_font_sizes/font_size = 66
+text = "Programming"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Credits/HBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.654902, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.231373, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_constants/shadow_outline_size = 40
+theme_override_fonts/font = SubResource("SystemFont_xjnc7")
+theme_override_font_sizes/font_size = 50
+text = "Rakea
+LucArtsymation
+Bot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Credits/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label4" type="Label" parent="Credits/HBoxContainer2/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.654902, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.231373, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_constants/shadow_outline_size = 40
+theme_override_fonts/font = SubResource("SystemFont_xjnc7")
+theme_override_font_sizes/font_size = 66
+text = "Arts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Credits/HBoxContainer2/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.654902, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.231373, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_constants/shadow_outline_size = 40
+theme_override_fonts/font = SubResource("SystemFont_xjnc7")
+theme_override_font_sizes/font_size = 50
+text = "LucArtsymations
+Birby or Erin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Credits/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label6" type="Label" parent="Credits/HBoxContainer2/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.654902, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.231373, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_constants/shadow_outline_size = 40
+theme_override_fonts/font = SubResource("SystemFont_xjnc7")
+theme_override_font_sizes/font_size = 66
+text = "Music
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Credits/HBoxContainer2/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.654902, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.231373, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_constants/shadow_outline_size = 40
+theme_override_fonts/font = SubResource("SystemFont_xjnc7")
+theme_override_font_sizes/font_size = 50
+text = "Vanaco"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Credits/HBoxContainer2/VBoxContainer/ExitCredits" to="." method="_on_exit_credits_pressed"]
