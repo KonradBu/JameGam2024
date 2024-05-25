@@ -10,11 +10,12 @@ func _ready():
 	var direction = (mousePosition - get_global_position()).normalized()
 	print(direction)
 	velocity = direction * needleSpeed
+	animated_sprite_2d.flip_h = true
 	animated_sprite_2d.play("Spin")
 	
 func _process(delta):
-	if (velocity.length() < 1000):
-		animated_sprite_2d.stop()
+	if is_on_floor() == true:
+		animated_sprite_2d.play("Static")
 		
 func _physics_process(delta):
 	move_and_collide(velocity * delta)
