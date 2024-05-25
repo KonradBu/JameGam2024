@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c2pfdqffyyxh8" path="res://scenes/Player.tscn" id="2_tfyuk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrkh1"]
-size = Vector2(20, 22.019)
+size = Vector2(20, 19.7188)
 
 [node name="Character" type="Node2D" groups=["player"]]
 scale = Vector2(0.372439, 0.372439)
@@ -19,7 +19,7 @@ script = ExtResource("1_qn8hq")
 position = Vector2(-0.999908, 1.00009)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-13.425, 0.00830054)
+position = Vector2(-13.425, 3.02751)
 scale = Vector2(3.59171, 14.2973)
 shape = SubResource("RectangleShape2D_wrkh1")
 
