@@ -10,7 +10,7 @@ func _physics_process(_delta):
 		patient_health-=1
 	if tile_id== 3:
 		var tile : Vector2 = local_to_map(get_global_mouse_position())
-		set_cell(0,tile,2)
+		set_cell(0, tile, 2)
 		game_progress+=0.1
 	if patient_health<=0:
 		print("HE'S DEAD JIM!")

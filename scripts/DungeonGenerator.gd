@@ -1,6 +1,6 @@
 extends Node
 
-var room = preload("res://scenes/room.tscn")
+var room = preload("res://scenes/Dungeon.tscn")
 
 var minRooms = 6
 var maxRooms = 10
@@ -10,7 +10,7 @@ var generationChance = 20
 func generate(roomSeed):
 	seed(roomSeed)
 	var dungeon = {}
-	var size = floor(randi_range(minRooms, maxRooms))
+	var size = floor(randf_range(minRooms, maxRooms))
 	
 	dungeon[Vector2(0, 0)] = room.instantiate()
 	size -= 1
@@ -20,7 +20,7 @@ func generate(roomSeed):
 	while(size > 0):
 		for i in dungeon.keys():
 			if (randi_range(0, 100) < generationChance) and size > 0:
-				var direction = randi_range(0, 4)
+				var direction = randf_range(0, 4)
 				
 				if direction < 1:
 					var newRoomPosition = i + Vector2(1, 0)
@@ -50,6 +50,6 @@ func generate(roomSeed):
 
 func connect_rooms(room1, room2, arraydirection):
 	room1.connectedRooms[arraydirection] = room2
-	room2.connectedRooms[arraydirection] = room1
+	room2.connectedRooms[-arraydirection] = room1
 	room1.numOfConnections += 1
 	room2.numOfConnections += 1
