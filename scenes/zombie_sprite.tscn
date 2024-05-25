@@ -1,0 +1,142 @@
+[gd_scene load_steps=28 format=3 uid="uid://1yvt4j3votgp"]
+
+[ext_resource type="Texture2D" uid="uid://cry37hcefevhx" path="res://Arts/Zombie/ArmSwing/Timeline 4_0000.png" id="1_x5fpl"]
+[ext_resource type="Texture2D" uid="uid://cjrlojm44e61m" path="res://Arts/Zombie/ArmSwing/Timeline 4_0001.png" id="2_l0s5b"]
+[ext_resource type="Texture2D" uid="uid://cuwrc10xpoyq7" path="res://Arts/Zombie/ArmSwing/Timeline 4_0002.png" id="3_js252"]
+[ext_resource type="Texture2D" uid="uid://bcxohyfa0d7y1" path="res://Arts/Zombie/ArmSwing/Timeline 4_0003.png" id="4_odt67"]
+[ext_resource type="Texture2D" uid="uid://besiol6y34q3t" path="res://Arts/Zombie/GettingTrapped/Timeline 2_0000.png" id="5_4d1ro"]
+[ext_resource type="Texture2D" uid="uid://cgflgu07cvoro" path="res://Arts/Zombie/GettingTrapped/Timeline 2_0001.png" id="6_g2jma"]
+[ext_resource type="Texture2D" uid="uid://mrq687sq5aml" path="res://Arts/Zombie/GettingTrapped/Timeline 2_0002.png" id="7_dqc3w"]
+[ext_resource type="Texture2D" uid="uid://d73otyq2muak" path="res://Arts/Zombie/GettingTrapped/Timeline 2_0003.png" id="8_m8iri"]
+[ext_resource type="Texture2D" uid="uid://b3r1syfyspvkw" path="res://Arts/Zombie/GettingTrapped/Timeline 2_0004.png" id="9_wbxkc"]
+[ext_resource type="Texture2D" uid="uid://ga5itwvm0yfo" path="res://Arts/Zombie/GettingTrapped/Timeline 2_0005.png" id="10_rpp0g"]
+[ext_resource type="Texture2D" uid="uid://jq8mejs0j6mr" path="res://Arts/Zombie/GettingTrapped/Timeline 2_0006.png" id="11_xsa35"]
+[ext_resource type="Texture2D" uid="uid://x5yc85jyqonb" path="res://Arts/Zombie/GettingTrapped/Timeline 2_0007.png" id="12_01iuo"]
+[ext_resource type="Texture2D" uid="uid://pudg8tffb00c" path="res://Arts/Zombie/GettingTrapped/Timeline 2_0008.png" id="13_m42vf"]
+[ext_resource type="Texture2D" uid="uid://b0q80c5x6nlq1" path="res://Arts/Zombie/GettingTrapped/Timeline 2_0009.png" id="14_sb316"]
+[ext_resource type="Texture2D" uid="uid://bnmw1wpjc2oq2" path="res://Arts/Zombie/zombie front.png" id="15_7j5du"]
+[ext_resource type="Texture2D" uid="uid://xdksrxyak3hy" path="res://Arts/Zombie/Walking/Timeline 1_0000.png" id="16_tviod"]
+[ext_resource type="Texture2D" uid="uid://hmxbobpm60ov" path="res://Arts/Zombie/Walking/Timeline 1_0001.png" id="17_gmu6c"]
+[ext_resource type="Texture2D" uid="uid://dy6awp58pkcw6" path="res://Arts/Zombie/Walking/Timeline 1_0002.png" id="18_q1ti7"]
+[ext_resource type="Texture2D" uid="uid://tuqf0qvali3f" path="res://Arts/Zombie/Walking/Timeline 1_0003.png" id="19_yevre"]
+[ext_resource type="Texture2D" uid="uid://cd8yqwkd6lvut" path="res://Arts/Zombie/Walking/Timeline 1_0004.png" id="20_ces87"]
+[ext_resource type="Texture2D" uid="uid://c7h2c57ku0lv7" path="res://Arts/Zombie/Walking/Timeline 1_0005.png" id="21_082m5"]
+[ext_resource type="Texture2D" uid="uid://ce3vgcqd06oek" path="res://Arts/Zombie/Walking/Timeline 1_0006.png" id="22_32s5m"]
+[ext_resource type="Texture2D" uid="uid://e10vk0eqtie2" path="res://Arts/Zombie/Walking/Timeline 1_0007.png" id="23_t4xgp"]
+[ext_resource type="Texture2D" uid="uid://307e1pxo1jps" path="res://Arts/Zombie/Trapped/Timeline 3_0000.png" id="24_idpr2"]
+[ext_resource type="Texture2D" uid="uid://bx5vkmnen6xn8" path="res://Arts/Zombie/Trapped/Timeline 3_0001.png" id="25_ut21o"]
+[ext_resource type="Texture2D" uid="uid://11ww3vhaql1o" path="res://Arts/Zombie/Trapped/Timeline 3_0002.png" id="26_p7sip"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fmpgs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x5fpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_l0s5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_js252")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_odt67")
+}],
+"loop": true,
+"name": &"ArmSwing",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4d1ro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g2jma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dqc3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_m8iri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wbxkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rpp0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xsa35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_01iuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_m42vf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sb316")
+}],
+"loop": true,
+"name": &"GettingTrapped",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_7j5du")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_tviod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gmu6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q1ti7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_yevre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ces87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_082m5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_32s5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_t4xgp")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_idpr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ut21o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_p7sip")
+}],
+"loop": true,
+"name": &"Trapped",
+"speed": 7.0
+}]
+
+[node name="ZombieSprite" type="AnimatedSprite2D"]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_fmpgs")
+animation = &"Trapped"
+autoplay = "Idle"
+frame = 1
+frame_progress = 0.847327

@@ -19,4 +19,3 @@ sources/0 = SubResource("TileSetAtlasSource_fwfed")
 tile_set = SubResource("TileSet_aghba")
 rendering_quadrant_size = 128
 format = 2
-layer_0/tile_data = PackedInt32Array(-196603, 524288, 0)
