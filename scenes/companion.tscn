@@ -23,4 +23,10 @@ position = Vector2(-1, 0)
 scale = Vector2(0.829412, 0.829412)
 texture = ExtResource("2_f4cbo")
 
+[node name="ProgressBar" type="ProgressBar" parent="CharacterBody2D"]
+offset_right = 4.0
+offset_bottom = 27.0
+max_value = 200.0
+show_percentage = false
+
 [connection signal="timeout" from="CharacterBody2D/find_new_target" to="CharacterBody2D" method="_on_find_new_target_timeout"]

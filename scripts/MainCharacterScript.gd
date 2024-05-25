@@ -10,6 +10,7 @@ var down = false
 @export var canThrowNeedle = true
 @export var retractspeed = 600
 @export var health = 1
+@export var hitknockback = 25
 @onready var _animated_sprite = $Player
 
 
@@ -106,3 +107,6 @@ func _on_area_2d_body_entered(body):
 		if currentState == state.retracting:
 			body.currentState = body.state.trapped
 			body.health -= 1
+
+func hit(enemyposition):
+	currentState = state.dead

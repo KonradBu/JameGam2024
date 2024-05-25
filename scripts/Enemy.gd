@@ -22,11 +22,13 @@ func _physics_process(delta):
 	match type:
 		type.archer:
 			if(position.distance_to(targetposition) > 100):
-				new_position = position.move_toward(targetposition, enemyspeed * tempdelta)
+				new_position = position.move_toward(targetposition, enemyspeed * delta)
 			elif(position.distance_to(targetposition) < 70):
-				new_position = position.move_toward(targetposition, -enemyspeed * tempdelta)
+				new_position = position.move_toward(targetposition, -enemyspeed * delta)
+			else:
+				new_position = position
 		_:
-			new_position = position.move_toward(targetposition, enemyspeed * tempdelta)
+			new_position = position.move_toward(targetposition, enemyspeed * delta)
 	position = new_position
 	
 	#if(currentState == state.alive):
@@ -107,3 +109,8 @@ func find_target():
 
 func _on_find_new_target_timeout():
 	targetposition = find_target()
+
+
+func _on_area_2d_body_entered(body):
+	if (body.is_in_group("player")):
+		body.hit(position)

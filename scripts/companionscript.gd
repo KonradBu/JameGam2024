@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 @export var companionSpeed = 200
-@export var health = 20
+@export var health = 1
+@export var hitknockback = 50
 
 enum armParts {default}
 enum legParts {default}
@@ -70,3 +71,8 @@ func find_target():
 
 func _on_find_new_target_timeout():
 	targetposition = find_target()
+	
+func hit(enemyposition):
+	position = position.move_toward(enemyposition, -hitknockback)
+	health -= 10
+	$ProgressBar.value -= 10
