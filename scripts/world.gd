@@ -30,9 +30,7 @@ func loadnextroom():
 	usedRooms.push_back(random)
 	var newroom = load(rooms[random])
 	var newroominstance = newroom.instantiate()
-	call_deferred("add_child", newroominstance)
-	call_deferred("remove_child", currentroom)
-	currentroom = newroominstance
+	loadroom(newroominstance)
 	
 func spawn_enemies():
 	var lowerRange = clearedRoomCounter
@@ -52,3 +50,18 @@ func set_roomIsCleared (status):
 	
 func minus_enemycount ():
 	enemycount -= 1
+
+func die():
+	var entrance = preload("res://scenes/roomEntrance.tscn").instantiate()
+	loadroom(entrance)
+	
+func loadroom(room):
+	call_deferred("add_child", room)
+	call_deferred("remove_child", currentroom)
+	currentroom = room
+	var playerscene = preload("res://scenes/Player.tscn")
+	room.call_deferred("add_child", playerscene)
+	playerscene.call_deferred("set_playerposition", room.playerspawnposition)
+	var companionscene = preload("res://scenes/companion.tscn")
+	room.call_deferred("add_child", companionscene)
+	companionscene.call_deferred("set_companionposition", room.companionspawnposition)

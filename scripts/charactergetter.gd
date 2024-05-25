@@ -12,3 +12,6 @@ func _process(delta):
 
 func get_position_body():
 	return $CharacterBody2D.get_global_position()
+
+func set_player_position(position):
+	$CharacterBody2D.position = position

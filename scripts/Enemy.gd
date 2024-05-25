@@ -27,6 +27,7 @@ func _ready():
 	character = get_node("../Player")
 	currentState = state.alive
 	currentType = type.values().pick_random()
+	add_to_group("enemy")
 	if(currentType == type.skeleton):
 		var skeleton_texture = load("res://textures/skeleton.png")
 		$Sprite2D.texture = skeleton_texture
@@ -103,10 +104,6 @@ func randomspawnpoint(topleft, bottomright):
 	var spawnposition = Vector2(rng.randi_range(topleft.x + distanceFromWalls, bottomright.x - distanceFromWalls), rng.randi_range(topleft.y + distanceFromWalls, bottomright.y - distanceFromWalls))
 	return spawnposition
 
-
-func _on_area_2d_body_entered(body):
-	if (body.is_in_group("player")):
-		body.hit(position)
 
 func hit(cause):
 	match (cause):

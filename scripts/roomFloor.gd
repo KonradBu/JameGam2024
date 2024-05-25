@@ -1,8 +1,10 @@
 extends Node2D
 var top_left = Vector2(0,0)
-var bottom_right = Vector2(1920,1080)
+var bottom_right = Vector2(1100,600)
 var world
 var roomIsCleared
+var playerspawnposition = Vector2(400,330)
+var companionspawnposition = Vector2(500,300)
 # Called when the node enters the scene tree for the first time.
 
 
