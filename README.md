@@ -4,3 +4,5 @@ rakeaDev (Konrad Burgi),
 botthemew (Connor Walton),
 Vanaco (Keanu Gathy),
 LucArtsymation
+
+THIS PROJECT IS CANCELLED! We couldn' get our work done in time for the deadline
