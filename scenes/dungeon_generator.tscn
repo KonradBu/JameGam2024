@@ -6,13 +6,13 @@
 script = ExtResource("1_pr1di")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.3, 0.3)
+zoom = Vector2(3.3, 3.3)
 
 [node name="Button" type="Button" parent="."]
-offset_left = -1853.0
-offset_top = -1012.0
-offset_right = -1158.0
-offset_bottom = -589.0
+offset_left = -170.0
+offset_top = -93.0
+offset_right = -58.0
+offset_bottom = -62.0
 text = "GENERATE"
 
 [node name="MapNode" type="Node2D" parent="."]

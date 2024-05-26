@@ -1,8 +1,8 @@
 extends Node2D
 
 var dungeon = {}
-var node_sprite = load("res://Arts/map_nodes1.png")
-var branch_sprite = load("res://Arts/map_nodes3.png")
+var node_sprite = preload("res://scenes/room_2.tscn")
+var branch_sprite = preload("res://scenes/tutorial.tscn")
 
 @onready var map_node = $MapNode
 
@@ -15,25 +15,22 @@ func load_map():
 			map_node.get_child(i).queue_free()
 			
 		for i in dungeon.keys():
-			var temp = Sprite2D.new()
-			temp.texture = node_sprite
+			var temp = node_sprite.instantiate()
 			map_node.add_child(temp)
-			temp.z_index = 1
-			temp.position = i * 10
+			temp.position = i * 150
+			temp.scale = Vector2(0.1, 0.1)
 			var c_rooms = dungeon.get(i).connectedRooms
 			if(c_rooms.get(Vector2(1, 0)) != null):
-				temp = Sprite2D.new()
-				temp.texture = branch_sprite
+				temp = branch_sprite.instantiate()
 				map_node.add_child(temp)
-				temp.z_index = 0
-				temp.position = i * 10 + Vector2(5, 0.5)
+				temp.position = i * 10 + Vector2(300, 30)
+				temp.scale = Vector2(0.1, 0.1)
 			if(c_rooms.get(Vector2(0, 1)) != null):
-				temp = Sprite2D.new()
-				temp.texture = branch_sprite
+				temp = branch_sprite.instantiate()
 				map_node.add_child(temp)
-				temp.z_index = 0
 				temp.rotation_degrees = 90
-				temp.position = i * 10 + Vector2(-0.5, 5)
+				temp.position = i * 10 + Vector2(-30, 300)
+				temp.scale = Vector2(0.1, 0.1)
 
 func _on_button_pressed():
 	randomize()
